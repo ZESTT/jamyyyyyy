@@ -8,7 +8,11 @@ const port = 3000
 
 app.use(express.json())
 
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://jamyyyyyy-production.up.railway.app'], // يمكن أن تحدد المصادر المسموح بها لزيادة الأمان
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
 app.use('/api',userRouter)
 app.use('/blogs',blogRouter)
 
