@@ -2,10 +2,13 @@ import express from 'express'
 import { dbConection } from './utils/db/dbConecction.js'
 import { userRouter } from './src/user/userRouter.js'
 import { blogRouter } from './src/blog/blogRouter.js'
+import cors from 'cors'; // 1. استيراد حزمة CORS
 const app = express()
 const port = 3000
 
 app.use(express.json())
+
+app.use(cors());
 app.use('/api',userRouter)
 app.use('/blogs',blogRouter)
 
