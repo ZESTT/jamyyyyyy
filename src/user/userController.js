@@ -1,6 +1,7 @@
 import { userModel } from "../../utils/models/userModel.js"
  import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
+import dotenv from 'dotenv' // 🛑 1. تأكد من استيراد dotenv هنا
 
 dotenv.config()
 
