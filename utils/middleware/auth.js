@@ -12,8 +12,7 @@ export function auth(req,res,next) {
     
   }else{
     console.log(decoded);
-    req.userId = decoded.user._id
-    next()
+userId = decoded.user._id; // 🛑 يجب أن يتطابق مسار الـ ID هنا    next()
   }
 });
 }
